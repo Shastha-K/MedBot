@@ -42,14 +42,14 @@ pip install -r requirements.txt
 
 3. Create a Google Cloud Project
 
-   1. Go to Google Cloud Console
-   2. Enable APIs:
+1. Go to Google Cloud Console
+2. Enable APIs:
      - Vertex AI API
      - Cloud Speech-to-Text API
-   3. Create a Service Account with roles:
+3. Create a Service Account with roles:
      - Vertex AI User
      - Cloud Speech Client
-   4. Download the JSON key (e.g., medbot-key.json)
+4. Download the JSON key (e.g., medbot-key.json)
 
 4. Set environment variable
 
