@@ -40,32 +40,28 @@ cd medbot
 pip install -r requirements.txt
 ```
 
-3. Create a Google Cloud Project
+3. Model Training & Fine-Tuning on Vertex AI
+   1. Dataset Preparation
+     - Collected datasets:
+     - PubMedQA → medical Q&A.
+     - A-Z Medicine Dataset of India(Kaggle)
+     
+   2. Preprocessing: 
+     Converted into instruction–response JSONL (Vertex AI requires this format):
+     ```
+     {"input_text": "What is the treatment for diabetes?", "output_text": "Diabetes is managed with lifestyle changes, monitoring, and medications like metformin."}
+     {"input_text": "What are side effects of aspirin?", "output_text": "Stomach pain, nausea, heartburn, and bleeding risk."}
+     ```
+     
+     Uploaded dataset to Google Cloud Storage bucket (gs://your-bucket/medbot_dataset.jsonl).
 
-1. Go to Google Cloud Console
-2. Enable APIs:
-     - Vertex AI API
-     - Cloud Speech-to-Text API
-3. Create a Service Account with roles:
-     - Vertex AI User
-     - Cloud Speech Client
-4. Download the JSON key (e.g., medbot-key.json)
+   3. Vertex AI Model Selection
+     - Vertex supports custom fine-tuning of models like Llama / Gemini.
+     - MedBot was built on Gemini Flash 2.0 lite.
 
-4. Set environment variable
+   4. Model Fine-Tuning and Deployement
+     - The JSONL files are uploaded in buckets for fine-tuning.
+     - The model can be accessed via a CLI but for our use case we deployed it in a bucket.
 
-macOS/Linux
-```
-export GOOGLE_APPLICATION_CREDENTIALS="/path/to/medbot-key.json"
-```
-
-Windows (CMD)
-```
-set GOOGLE_APPLICATION_CREDENTIALS="C:\path\to\medbot-key.json"
-```
-
-5. Configure Vertex AI model
-- Go to Vertex AI → Generative AI → Models
-- Select a model (e.g., text-bison@001)
-- Update your code to use the model ID
-
-
+4. GUI Endpoint
+   1. 
