@@ -41,7 +41,7 @@ pip install -r requirements.txt
    1. Dataset Preparation
      - Collected datasets:
      - PubMedQA → medical Q&A.
-     - A-Z Medicine Dataset of India(Kaggle)\
+     - A-Z Medicine Dataset of India(Kaggle)  
    2. Preprocessing: 
      Converted into instruction–response JSONL (Vertex AI requires this format):
      ```
