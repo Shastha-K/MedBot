@@ -18,7 +18,6 @@ except ImportError:
     PIL_AVAILABLE = False
     print("PIL not available. Running without image support.")
 
-# Suppress ALSA warnings (for macOS compatibility)
 os.environ["ALSA_LOG_LEVEL"] = "0"
 os.environ["PA_ALSA_PLUGHW"] = "1"
 
@@ -27,12 +26,12 @@ logger = logging.getLogger(__name__)
 
 PROJECT_ID = "circular-gist-455506-g1"
 REGION = "us-east1"
-ENDPOINT_ID = "2784961798086852608"
-SERVICE_ACCOUNT_FILE = "/Users/shastha/Desktop/SHASTHA/MedBot_ft/medbot-api-key.json"  # Update to your macOS path
+ENDPOINT_ID = "--Your_Endpoint_ID--"
+SERVICE_ACCOUNT_FILE = "----"  
 MAX_TOKENS = 4096
-IMAGE_PATH = "medbot_image.jpg"  # Update to your macOS path
+IMAGE_PATH = "medbot_image.jpg"  # image of eyes on the Splash Screen
 
-# Servo pins (commented out since pigpio is not available on macOS)
+# Servo pins 
 # S1_PIN = 22
 # S2_PIN = 23
 # S3_PIN = 24
@@ -63,7 +62,6 @@ except Exception as e:
 def estimate_tokens(text):
     return len(text) // 4 + 1
 
-# Comment out move_servo function since pigpio is not available
 # def move_servo(pin, angles, delay_time=1):
 #     for angle in angles:
 #         pulse = int(600 + (angle / 180.0) * 1800)
@@ -245,11 +243,10 @@ def on_closing():
         root.destroy()
 
 # GUI Setup with ttkbootstrap
-root = ttk.Window(themename="flatly")  # Use a modern theme
+root = ttk.Window(themename="flatly")  
 root.title("MedBot Chatbot")
 root.geometry("800x560")
 
-# Splash Screen
 splash_frame = ttk.Frame(root)
 splash_frame.pack(fill=tk.BOTH, expand=True)
 
