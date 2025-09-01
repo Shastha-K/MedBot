@@ -38,29 +38,29 @@ pip install -r requirements.txt
 ```
 
 3. Model Training & Fine-Tuning on Vertex AI
-   1. Dataset Preparation
+   - Dataset Preparation
      - Collected datasets:
      - PubMedQA → medical Q&A.
-     - A-Z Medicine Dataset of India(Kaggle)<br/>
-       
-   2. Preprocessing: 
+     - A-Z Medicine Dataset of India(Kaggle)
+
+   - Preprocessing: 
      Converted into instruction–response JSONL (Vertex AI requires this format):
      ```
      {"input_text": "What is the treatment for diabetes?", "output_text": "Diabetes is managed with lifestyle changes, monitoring, and medications like metformin."}
      {"input_text": "What are side effects of aspirin?", "output_text": "Stomach pain, nausea, heartburn, and bleeding risk."}
      ```
      
-     Uploaded dataset to Google Cloud Storage bucket (gs://your-bucket/medbot_dataset.jsonl).<br/>
+     Uploaded dataset to Google Cloud Storage bucket (gs://your-bucket/medbot_dataset.jsonl).
 
-   3. Vertex AI Model Selection
+   - Vertex AI Model Selection
      - Vertex supports custom fine-tuning of models like Llama / Gemini.
-     - MedBot was built on Gemini Flash 2.0 lite.<br/>
+     - MedBot was built on Gemini Flash 2.0 lite.
 
-   4. Model Fine-Tuning and Deployement
+   - Model Fine-Tuning and Deployement
      - The JSONL files are uploaded in buckets for fine-tuning.
-     - The model can be accessed via a CLI but for our use case we deployed it in a bucket.<br/>
+     - The model can be accessed via a CLI but for our use case we deployed it in a bucket.
 
-4. GUI Endpoint
+3. GUI Endpoint
    1. In the gui_endpoint.py file, update the config on the code.
 ```
 PROJECT_ID = "your-project-id"
