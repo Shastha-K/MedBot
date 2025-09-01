@@ -4,7 +4,6 @@ It uses **Google Vertex AI** for generating responses and **Google Cloud Speech-
 
 🏆 3rd Place Winner – Engineering Clinics Expo 2025 (500+ projects)
 
---
 
 ## Features
 
@@ -14,7 +13,6 @@ It uses **Google Vertex AI** for generating responses and **Google Cloud Speech-
 - Chat History – Scrollable user–bot conversation logs
 - Pill Dispenser Integration – Raspberry Pi hardware extension 
 
---
 
 ## Tech Stack
 
@@ -25,7 +23,6 @@ It uses **Google Vertex AI** for generating responses and **Google Cloud Speech-
 - PyAudio – Microphone input
 - Pillow (PIL) – Image handling in UI
 
---
 
 ## Setup & Installation
 
@@ -44,8 +41,7 @@ pip install -r requirements.txt
    1. Dataset Preparation
      - Collected datasets:
      - PubMedQA → medical Q&A.
-     - A-Z Medicine Dataset of India(Kaggle)<br/>
-     
+     - A-Z Medicine Dataset of India(Kaggle)\
    2. Preprocessing: 
      Converted into instruction–response JSONL (Vertex AI requires this format):
      ```
