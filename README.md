@@ -44,7 +44,7 @@ pip install -r requirements.txt
    1. Dataset Preparation
      - Collected datasets:
      - PubMedQA → medical Q&A.
-     - A-Z Medicine Dataset of India(Kaggle)
+     - A-Z Medicine Dataset of India(Kaggle)\
      
    2. Preprocessing: 
      Converted into instruction–response JSONL (Vertex AI requires this format):
@@ -53,15 +53,15 @@ pip install -r requirements.txt
      {"input_text": "What are side effects of aspirin?", "output_text": "Stomach pain, nausea, heartburn, and bleeding risk."}
      ```
      
-     Uploaded dataset to Google Cloud Storage bucket (gs://your-bucket/medbot_dataset.jsonl).
+     Uploaded dataset to Google Cloud Storage bucket (gs://your-bucket/medbot_dataset.jsonl).\
 
    3. Vertex AI Model Selection
      - Vertex supports custom fine-tuning of models like Llama / Gemini.
-     - MedBot was built on Gemini Flash 2.0 lite.
+     - MedBot was built on Gemini Flash 2.0 lite.\
 
    4. Model Fine-Tuning and Deployement
      - The JSONL files are uploaded in buckets for fine-tuning.
-     - The model can be accessed via a CLI but for our use case we deployed it in a bucket.
+     - The model can be accessed via a CLI but for our use case we deployed it in a bucket.\
 
 4. GUI Endpoint
    1. 
